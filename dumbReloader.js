@@ -1,7 +1,9 @@
 import io from 'socket.io-client';
 
+console.log('io', io)
 const socket = io();
 function registerIO() {
+  console.log('connected!')
   const evts = {
     fileChanged(msg) {
       document.location.reload()
